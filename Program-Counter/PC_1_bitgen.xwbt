@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Xilinx\Tutorial\Program-Counter\PC_1.ncd
-OUTFILE=C:\Xilinx\Tutorial\Program-Counter\PC_1.bit
-FAMILY=Spartan6
-PART=xc6slx16-2csg324
-WORKINGDIR=C:\Xilinx\Tutorial\Program-Counter
-LICENSE=WebPack
-USER_INFO=211309647_0_0_532
