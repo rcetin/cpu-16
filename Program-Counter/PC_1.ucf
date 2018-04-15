@@ -1,0 +1,28 @@
+	 net clock loc = V10;
+	 net btns loc=B8; 
+	 net btnu loc=A8; 
+	 net btnd loc=C9;
+	 net btnr loc=D9;
+	 net btnl loc=C4; 
+	 
+	 net new_count[7] loc=T5;
+	 net new_count[6] loc=V8;
+	 net new_count[5] loc=U8;
+	 net new_count[4] loc=N8;
+	 net new_count[3] loc=M8;
+	 net new_count[2] loc=V9;
+	 net new_count[1] loc=T9;
+	 net new_count[0] loc=T10;
+	
+	 net a loc=T17;
+	 net b loc=T18;
+	 net c loc=U17;
+	 net d loc=U18;
+	 net e loc=M14;
+	 net ff loc=N14;
+	 net g loc=L14;
+	 net dp loc=M13;
+    net an[3] loc=P17;
+	 net an[2] loc=P18;
+	 net an[1] loc=N15;
+	 net an[0] loc=N16;

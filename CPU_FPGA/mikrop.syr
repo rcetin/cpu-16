@@ -1,0 +1,1223 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: mikrop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mikrop.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mikrop"
+Output Format                      : NGC
+Target Device                      : xc6slx16-2-csg324
+
+---- Source Options
+Top Module Name                    : mikrop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" into library work
+Parsing module <mikrop>.
+Parsing module <clk_div>.
+Parsing module <CPU>.
+Parsing module <PC>.
+Parsing module <shifter>.
+Parsing module <inde>.
+Parsing module <Sign_Ex_Test>.
+Parsing module <mux2x1>.
+Parsing module <ALU>.
+Parsing module <andop>.
+Parsing module <orop>.
+Parsing module <xorop>.
+Parsing module <notop>.
+Parsing module <xnorop>.
+Parsing module <zero>.
+Parsing module <carry_select_adder_subtractor>.
+Parsing module <carry_select_adder>.
+Parsing module <ripple_carry_adder>.
+Parsing module <full_adder>.
+Parsing module <multiplexer_2_1>.
+Parsing module <multiplexer_4_1>.
+Parsing module <multiplexer_8_1>.
+Parsing module <reg_file>.
+Parsing module <DEMUX_1x16>.
+Parsing module <DFF>.
+Parsing module <My_NAND>.
+Parsing module <MUX16X1>.
+Parsing module <MUX16X1_32>.
+Parsing module <reg16>.
+Parsing module <spblockram_im>.
+Parsing module <spblockram_data>.
+Parsing module <debounce>.
+Parsing module <seven_segment_led>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <mikrop>.
+
+Elaborating module <CPU>.
+WARNING:HDLCompiler:1127 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 109: Assignment to out_ireg_inv_assign ignored, since the identifier is never used
+
+Elaborating module <inde>.
+WARNING:HDLCompiler:1127 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 309: Assignment to immLow ignored, since the identifier is never used
+
+Elaborating module <reg16>.
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 180: Size mismatch in connection of port <D>. Formal port size is 16-bit while actual signal size is 4-bit.
+
+Elaborating module <multiplexer_4_1>.
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 182: Size mismatch in connection of port <A3>. Formal port size is 16-bit while actual signal size is 32-bit.
+
+Elaborating module <Sign_Ex_Test>.
+
+Elaborating module <ALU>.
+
+Elaborating module <carry_select_adder_subtractor>.
+
+Elaborating module <carry_select_adder>.
+
+Elaborating module <ripple_carry_adder>.
+
+Elaborating module <full_adder>.
+WARNING:HDLCompiler:1127 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 882: Assignment to V0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 883: Assignment to V1_0 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 883: Size mismatch in connection of port <Cin>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:1127 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 884: Assignment to V1_1 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 884: Size mismatch in connection of port <Cin>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:1127 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 885: Assignment to V2_0 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 885: Size mismatch in connection of port <Cin>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:1127 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 886: Assignment to V2_1 ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 886: Size mismatch in connection of port <Cin>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 887: Size mismatch in connection of port <Cin>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 888: Size mismatch in connection of port <Cin>. Formal port size is 1-bit while actual signal size is 32-bit.
+
+Elaborating module <multiplexer_2_1(WIDTH=1)>.
+
+Elaborating module <multiplexer_2_1(WIDTH=4)>.
+
+Elaborating module <andop>.
+
+Elaborating module <orop>.
+
+Elaborating module <xorop>.
+
+Elaborating module <notop>.
+
+Elaborating module <xnorop>.
+
+Elaborating module <multiplexer_8_1>.
+
+Elaborating module <zero>.
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 788: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 789: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 790: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 791: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 792: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 793: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 794: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 795: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 796: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 797: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 798: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 799: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 800: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 801: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 802: Actual bit length 32 differs from formal bit length 1
+WARNING:HDLCompiler:188 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 803: Actual bit length 32 differs from formal bit length 1
+
+Elaborating module <reg_file>.
+
+Elaborating module <multiplexer_2_1>.
+
+Elaborating module <shifter>.
+WARNING:HDLCompiler:91 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 268: Signal <amount> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 272: Signal <amount> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <PC>.
+WARNING:HDLCompiler:413 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 249: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <spblockram_data>.
+
+Elaborating module <spblockram_im>.
+WARNING:HDLCompiler:189 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 207: Size mismatch in connection of port <a>. Formal port size is 6-bit while actual signal size is 16-bit.
+
+Elaborating module <debounce>.
+WARNING:HDLCompiler:413 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 1488: Result of 23-bit expression is truncated to fit in 22-bit target.
+
+Elaborating module <seven_segment_led>.
+WARNING:HDLCompiler:413 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" Line 1551: Result of 19-bit expression is truncated to fit in 18-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <mikrop>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+	no macro.
+Unit <mikrop> synthesized.
+
+Synthesizing Unit <CPU>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+	no macro.
+Unit <CPU> synthesized.
+
+Synthesizing Unit <inde>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+WARNING:Xst:647 - Input <out_psr<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <jump>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <wr_en>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <select_mux_which_load<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <select_mux_which_load<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <select_mux_which_load<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <select_mux_mov>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <arith_mux_select0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <arith_mux_select1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_out<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_out<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <alu_out<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <select_mux_load>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <ram_en>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <select_br_or_jump>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <select_which_to_shift>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <branch>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred  16 Latch(s).
+	inferred  88 Multiplexer(s).
+Unit <inde> synthesized.
+
+Synthesizing Unit <reg16>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Found 16-bit register for signal <Q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <reg16> synthesized.
+
+Synthesizing Unit <multiplexer_4_1>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+        WIDTH = 16
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <multiplexer_4_1> synthesized.
+
+Synthesizing Unit <Sign_Ex_Test>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+	no macro.
+Unit <Sign_Ex_Test> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+	no macro.
+Unit <ALU> synthesized.
+
+Synthesizing Unit <carry_select_adder_subtractor>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+Unit <carry_select_adder_subtractor> synthesized.
+
+Synthesizing Unit <carry_select_adder>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+INFO:Xst:3210 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" line 882: Output port <V> of the instance <rc_nibble_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" line 883: Output port <V> of the instance <rc_nibble_1_carry_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" line 884: Output port <V> of the instance <rc_nibble_1_carry_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" line 885: Output port <V> of the instance <rc_nibble_2_carry_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v" line 886: Output port <V> of the instance <rc_nibble_2_carry_1> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <carry_select_adder> synthesized.
+
+Synthesizing Unit <ripple_carry_adder>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+Unit <ripple_carry_adder> synthesized.
+
+Synthesizing Unit <full_adder>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+Unit <full_adder> synthesized.
+
+Synthesizing Unit <multiplexer_2_1_1>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+        WIDTH = 1
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <multiplexer_2_1_1> synthesized.
+
+Synthesizing Unit <multiplexer_2_1_2>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+        WIDTH = 4
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <multiplexer_2_1_2> synthesized.
+
+Synthesizing Unit <andop>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+	no macro.
+Unit <andop> synthesized.
+
+Synthesizing Unit <orop>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+	no macro.
+Unit <orop> synthesized.
+
+Synthesizing Unit <xorop>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+Unit <xorop> synthesized.
+
+Synthesizing Unit <notop>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+	no macro.
+Unit <notop> synthesized.
+
+Synthesizing Unit <xnorop>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+Unit <xnorop> synthesized.
+
+Synthesizing Unit <multiplexer_8_1>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+        WIDTH = 16
+    Summary:
+	inferred   7 Multiplexer(s).
+Unit <multiplexer_8_1> synthesized.
+
+Synthesizing Unit <zero>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Summary:
+Unit <zero> synthesized.
+
+Synthesizing Unit <reg_file>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Found 256-bit register for signal <n0029[255:0]>.
+    Found 16-bit 16-to-1 multiplexer for signal <rd0_data> created at line 1075.
+    Found 16-bit 16-to-1 multiplexer for signal <rd1_data> created at line 1076.
+    Summary:
+	inferred 256 D-type flip-flop(s).
+	inferred  18 Multiplexer(s).
+Unit <reg_file> synthesized.
+
+Synthesizing Unit <multiplexer_2_1>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+        WIDTH = 16
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <multiplexer_2_1> synthesized.
+
+Synthesizing Unit <shifter>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+WARNING:Xst:647 - Input <amount_of_shift<15:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit shifter logical left for signal <shifting_value[15]_amount[3]_shift_left_2_OUT> created at line 268
+    Found 16-bit shifter logical right for signal <shifting_value[15]_amount[3]_shift_right_3_OUT> created at line 272
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <shifter> synthesized.
+
+Synthesizing Unit <PC>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Found 16-bit register for signal <new_count>.
+    Found 16-bit subtractor for signal <new_count[15]_bj_value[15]_sub_5_OUT> created at line 240.
+    Found 16-bit adder for signal <new_count[15]_bj_value[15]_add_2_OUT> created at line 235.
+    Found 16-bit adder for signal <new_count[15]_GND_40_o_add_7_OUT> created at line 249.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <PC> synthesized.
+
+Synthesizing Unit <spblockram_data>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Found 16x16-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 4-bit register for signal <read_addr>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 D-type flip-flop(s).
+Unit <spblockram_data> synthesized.
+
+Synthesizing Unit <spblockram_im>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'RAM', unconnected in block 'spblockram_im', is tied to its initial value.
+    Found 64x16-bit single-port Read Only RAM <Mram_RAM> for signal <RAM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <spblockram_im> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+        N = 22
+    Found 1-bit register for signal <DFF2>.
+    Found 22-bit register for signal <q_reg>.
+    Found 1-bit register for signal <n_reset>.
+    Found 1-bit register for signal <DB_out>.
+    Found 1-bit register for signal <DFF1>.
+    Found 22-bit adder for signal <q_reg[21]_GND_43_o_add_0_OUT> created at line 1488.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <seven_segment_led>.
+    Related source file is "D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.v".
+    Found 18-bit register for signal <count>.
+    Found 18-bit adder for signal <count[17]_GND_44_o_add_0_OUT> created at line 1551.
+    Found 4x4-bit Read Only RAM for signal <an_temp>
+    Found 7-bit 4-to-1 multiplexer for signal <sseg> created at line 1559.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <seven_segment_led> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit dual-port RAM                               : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+ 64x16-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 3
+ 16-bit addsub                                         : 1
+ 18-bit adder                                          : 1
+ 22-bit adder                                          : 1
+# Registers                                            : 10
+ 1-bit register                                        : 2
+ 16-bit register                                       : 3
+ 18-bit register                                       : 1
+ 2-bit register                                        : 1
+ 22-bit register                                       : 1
+ 256-bit register                                      : 1
+ 4-bit register                                        : 1
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Multiplexers                                         : 142
+ 1-bit 2-to-1 multiplexer                              : 93
+ 16-bit 16-to-1 multiplexer                            : 2
+ 16-bit 2-to-1 multiplexer                             : 42
+ 4-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 129
+ 1-bit xor2                                            : 129
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <Q_0> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_1> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_2> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_4> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_5> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_6> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_7> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_8> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_9> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_10> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_11> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_12> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_13> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_14> of sequential type is unconnected in block <psr>.
+WARNING:Xst:2677 - Node <Q_15> of sequential type is unconnected in block <psr>.
+
+Synthesizing (advanced) Unit <seven_segment_led>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_an_temp> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <an_temp>       |          |
+    -----------------------------------------------------------------------
+Unit <seven_segment_led> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spblockram_data>.
+INFO:Xst:3231 - The small RAM <Mram_RAM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <a>             |          |
+    |     diA            | connected to signal <di>            |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     addrB          | connected to signal <read_addr>     |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <spblockram_data> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spblockram_im>.
+INFO:Xst:3217 - HDL ADVISOR - Register <Q> currently described with an asynchronous reset, could be combined with distributed RAM <Mram_RAM> for implementation on block RAM resources if you made this reset synchronous instead.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <a>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <spblockram_im> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit dual-port distributed RAM                   : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+ 64x16-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 2
+ 16-bit addsub                                         : 1
+ 22-bit adder                                          : 1
+# Counters                                             : 1
+ 18-bit up counter                                     : 1
+# Registers                                            : 334
+ Flip-Flops                                            : 334
+# Multiplexers                                         : 138
+ 1-bit 2-to-1 multiplexer                              : 89
+ 16-bit 16-to-1 multiplexer                            : 2
+ 16-bit 2-to-1 multiplexer                             : 42
+ 4-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 2
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 129
+ 1-bit xor2                                            : 129
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mikrop> ...
+
+Optimizing unit <reg16> ...
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <reg_file> ...
+
+Optimizing unit <PC> ...
+
+Optimizing unit <inde> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <carry_select_adder_subtractor> ...
+
+Optimizing unit <carry_select_adder> ...
+
+Optimizing unit <multiplexer_8_1> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <seven_segment_led> ...
+WARNING:Xst:2677 - Node <cpuu/psr/Q_15> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_14> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_13> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_12> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_11> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_10> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_9> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_8> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_7> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_6> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_5> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_4> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_2> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_1> of sequential type is unconnected in block <mikrop>.
+WARNING:Xst:2677 - Node <cpuu/psr/Q_0> of sequential type is unconnected in block <mikrop>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mikrop, actual ratio is 14.
+WARNING:Xst:1426 - The value init of the FF/Latch debouncee/n_reset hinder the constant cleaning in the block mikrop.
+   You should achieve better results by setting this init to 1.
+FlipFlop cpuu/inst_reg/Q_0 has been replicated 5 time(s)
+FlipFlop cpuu/inst_reg/Q_1 has been replicated 6 time(s)
+FlipFlop cpuu/inst_reg/Q_10 has been replicated 2 time(s)
+FlipFlop cpuu/inst_reg/Q_11 has been replicated 1 time(s)
+FlipFlop cpuu/inst_reg/Q_2 has been replicated 2 time(s)
+FlipFlop cpuu/inst_reg/Q_3 has been replicated 1 time(s)
+FlipFlop cpuu/inst_reg/Q_8 has been replicated 5 time(s)
+FlipFlop cpuu/inst_reg/Q_9 has been replicated 5 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 364
+ Flip-Flops                                            : 364
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : mikrop.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1065
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 38
+#      LUT2                        : 21
+#      LUT3                        : 45
+#      LUT4                        : 56
+#      LUT5                        : 109
+#      LUT6                        : 544
+#      MUXCY                       : 53
+#      MUXF7                       : 103
+#      MUXF8                       : 32
+#      VCC                         : 1
+#      XORCY                       : 56
+# FlipFlops/Latches                : 380
+#      FD                          : 23
+#      FDC                         : 44
+#      FDCE                        : 272
+#      FDE                         : 1
+#      FDR                         : 24
+#      LD                          : 11
+#      LDC                         : 2
+#      LDE_1                       : 3
+# RAMS                             : 6
+#      RAM16X1D                    : 4
+#      RAM32M                      : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 30
+#      IBUF                        : 2
+#      OBUF                        : 28
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             380  out of  18224     2%  
+ Number of Slice LUTs:                  835  out of   9112     9%  
+    Number used as Logic:               819  out of   9112     8%  
+    Number used as Memory:               16  out of   2176     0%  
+       Number used as RAM:               16
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    862
+   Number with an unused Flip Flop:     482  out of    862    55%  
+   Number with an unused LUT:            27  out of    862     3%  
+   Number of fully used LUT-FF pairs:   353  out of    862    40%  
+   Number of unique control sets:        17
+
+IO Utilization: 
+ Number of IOs:                          31
+ Number of bonded IOBs:                  31  out of    232    13%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------+------------------------------------------+-------+
+Clock Signal                                                                 | Clock buffer(FF name)                    | Load  |
+-----------------------------------------------------------------------------+------------------------------------------+-------+
+debouncee/DB_out                                                             | BUFG                                     | 326   |
+cpuu/dec/op[3]_op_ex[3]_MUX_141_o(cpuu/dec/Mmux_op[3]_op_ex[3]_MUX_141_o14:O)| NONE(*)(cpuu/dec/jump)                   | 2     |
+cpuu/dec/op[3]_op_ex[3]_MUX_158_o(cpuu/dec/Mmux_op[3]_op_ex[3]_MUX_158_o12:O)| NONE(*)(cpuu/dec/alu_out_0)              | 3     |
+cpuu/dec/op[3]_op[3]_OR_50_o(cpuu/dec/op[3]_op[3]_OR_50_o:O)                 | NONE(*)(cpuu/dec/wr_en)                  | 1     |
+cpuu/dec/op[3]_op[3]_OR_61_o(cpuu/dec/op[3]_op[3]_OR_61_o2:O)                | NONE(*)(cpuu/dec/select_mux_which_load_0)| 3     |
+cpuu/dec/op[3]_op_ex[3]_MUX_157_o(cpuu/dec/Mmux_op[3]_op_ex[3]_MUX_157_o1:O) | NONE(*)(cpuu/dec/arith_mux_select0)      | 2     |
+cpuu/dec/op[3]_op_ex[3]_MUX_155_o(cpuu/dec/Mmux_op[3]_op_ex[3]_MUX_155_o12:O)| NONE(*)(cpuu/dec/select_mux_mov)         | 1     |
+cpuu/dec/_n0926(cpuu/dec/_n09261:O)                                          | NONE(*)(cpuu/dec/select_br_or_jump)      | 3     |
+cpuu/dec/op[3]_op[3]_AND_63_o(cpuu/dec/op[3]_op[3]_AND_63_o:O)               | NONE(*)(cpuu/dec/select_which_to_shift)  | 1     |
+board_clk                                                                    | BUFGP                                    | 44    |
+-----------------------------------------------------------------------------+------------------------------------------+-------+
+(*) These 8 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 11.071ns (Maximum Frequency: 90.326MHz)
+   Minimum input arrival time before clock: 4.225ns
+   Maximum output required time after clock: 13.654ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'debouncee/DB_out'
+  Clock period: 11.071ns (frequency: 90.326MHz)
+  Total number of paths / destination ports: 517638 / 392
+-------------------------------------------------------------------------
+Delay:               11.071ns (Levels of Logic = 12)
+  Source:            cpuu/reg_file16/mem_0_196 (FF)
+  Destination:       cpuu/reg_file16/mem_0_254 (FF)
+  Source Clock:      debouncee/DB_out rising
+  Destination Clock: debouncee/DB_out rising
+
+  Data Path: cpuu/reg_file16/mem_0_196 to cpuu/reg_file16/mem_0_254
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.525   1.221  cpuu/reg_file16/mem_0_196 (cpuu/reg_file16/mem_0_196)
+     LUT6:I0->O            1   0.254   0.000  cpuu/reg_file16/Mmux_rd1_data_410 (cpuu/reg_file16/Mmux_rd1_data_410)
+     MUXF7:I1->O           1   0.175   0.000  cpuu/reg_file16/Mmux_rd1_data_3_f7_9 (cpuu/reg_file16/Mmux_rd1_data_3_f710)
+     MUXF8:I1->O          10   0.152   1.008  cpuu/reg_file16/Mmux_rd1_data_2_f8_9 (cpuu/out_rfRsrc_to_arith_mux<4>)
+     LUT5:I4->O            5   0.254   1.069  cpuu/alu/addsub/Mxor_Bx<4>_xo<0>1 (cpuu/alu/addsub/Bx<4>)
+     LUT6:I3->O            1   0.235   0.910  cpuu/alu/addsub/csa/muxs1/Mmux_X41_SW2 (N45)
+     LUT5:I2->O            9   0.235   0.976  cpuu/alu/addsub/csa/muxs1/Mmux_X41 (cpuu/alu/addsub/csa/muxs1/Mmux_X41)
+     LUT6:I5->O            1   0.254   0.682  cpuu/alu/addsub/csa/muxc2/Mmux_X11 (cpuu/alu/addsub/csa/C2)
+     LUT6:I5->O            1   0.254   0.000  cpuu/alu/muxy/Mmux_X_351 (cpuu/alu/muxy/Mmux_X_35)
+     MUXF7:I1->O           2   0.175   0.726  cpuu/alu/muxy/Mmux_X_2_f7_4 (cpuu/out_alu_to_mux<14>)
+     LUT6:I5->O            1   0.254   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_35 (cpuu/which_to_load_wdat_mux/Mmux_X_35)
+     MUXF7:I1->O          17   0.175   1.209  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7_4 (result_14_OBUF)
+     LUT6:I5->O            1   0.254   0.000  cpuu/reg_file16/Mmux_mem[0][15]_wr_data[15]_mux_19_OUT61 (cpuu/reg_file16/mem[0][15]_wr_data[15]_mux_19_OUT<14>)
+     FDCE:D                    0.074          cpuu/reg_file16/mem_0_14
+    ----------------------------------------
+    Total                     11.071ns (3.270ns logic, 7.801ns route)
+                                       (29.5% logic, 70.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'board_clk'
+  Clock period: 3.482ns (frequency: 287.212MHz)
+  Total number of paths / destination ports: 538 / 67
+-------------------------------------------------------------------------
+Delay:               3.482ns (Levels of Logic = 23)
+  Source:            debouncee/q_reg_0 (FF)
+  Destination:       debouncee/q_reg_20 (FF)
+  Source Clock:      board_clk rising
+  Destination Clock: board_clk rising
+
+  Data Path: debouncee/q_reg_0 to debouncee/q_reg_20
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.525   0.725  debouncee/q_reg_0 (debouncee/q_reg_0)
+     INV:I->O              1   0.255   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_lut<0>_INV_0 (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<0> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<1> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<2> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<3> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<4> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<5> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<6> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<7> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<8> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<9> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<10> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<11> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<12> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<13> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<13>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<14> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<14>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<15> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<15>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<16> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<16>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<17> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<17>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<18> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<18>)
+     MUXCY:CI->O           1   0.023   0.000  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<19> (debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_cy<19>)
+     XORCY:CI->O           1   0.206   0.790  debouncee/Madd_q_reg[21]_GND_43_o_add_0_OUT_xor<20> (debouncee/q_reg[21]_GND_43_o_add_0_OUT<20>)
+     LUT5:I3->O            1   0.250   0.000  debouncee/q_next<2>1 (debouncee/q_next<20>)
+     FDR:D                     0.074          debouncee/q_reg_20
+    ----------------------------------------
+    Total                      3.482ns (1.967ns logic, 1.515ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'debouncee/DB_out'
+  Total number of paths / destination ports: 316 / 316
+-------------------------------------------------------------------------
+Offset:              4.225ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       cpuu/psr/Q_3 (FF)
+  Destination Clock: debouncee/DB_out rising
+
+  Data Path: reset to cpuu/psr/Q_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           316   1.328   2.438  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.459          cpuu/psr/Q_3
+    ----------------------------------------
+    Total                      4.225ns (1.787ns logic, 2.438ns route)
+                                       (42.3% logic, 57.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'board_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              2.083ns (Levels of Logic = 1)
+  Source:            SW2 (PAD)
+  Destination:       debouncee/DFF1 (FF)
+  Destination Clock: board_clk rising
+
+  Data Path: SW2 to debouncee/DFF1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.328   0.681  SW2_IBUF (SW2_IBUF)
+     FDR:D                     0.074          debouncee/DFF1
+    ----------------------------------------
+    Total                      2.083ns (1.402ns logic, 0.681ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpuu/dec/op[3]_op[3]_OR_61_o'
+  Total number of paths / destination ports: 80 / 16
+-------------------------------------------------------------------------
+Offset:              7.105ns (Levels of Logic = 3)
+  Source:            cpuu/dec/select_mux_which_load_0 (LATCH)
+  Destination:       result<15> (PAD)
+  Source Clock:      cpuu/dec/op[3]_op[3]_OR_61_o falling
+
+  Data Path: cpuu/dec/select_mux_which_load_0 to result<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              32   0.581   1.975  cpuu/dec/select_mux_which_load_0 (cpuu/dec/select_mux_which_load_0)
+     LUT6:I0->O            1   0.254   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_36 (cpuu/which_to_load_wdat_mux/Mmux_X_36)
+     MUXF7:I1->O          17   0.175   1.208  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7_5 (result_15_OBUF)
+     OBUF:I->O                 2.912          result_15_OBUF (result<15>)
+    ----------------------------------------
+    Total                      7.105ns (3.922ns logic, 3.183ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'debouncee/DB_out'
+  Total number of paths / destination ports: 30413 / 23
+-------------------------------------------------------------------------
+Offset:              13.654ns (Levels of Logic = 12)
+  Source:            cpuu/reg_file16/mem_0_196 (FF)
+  Destination:       result<14> (PAD)
+  Source Clock:      debouncee/DB_out rising
+
+  Data Path: cpuu/reg_file16/mem_0_196 to result<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.525   1.221  cpuu/reg_file16/mem_0_196 (cpuu/reg_file16/mem_0_196)
+     LUT6:I0->O            1   0.254   0.000  cpuu/reg_file16/Mmux_rd1_data_410 (cpuu/reg_file16/Mmux_rd1_data_410)
+     MUXF7:I1->O           1   0.175   0.000  cpuu/reg_file16/Mmux_rd1_data_3_f7_9 (cpuu/reg_file16/Mmux_rd1_data_3_f710)
+     MUXF8:I1->O          10   0.152   1.008  cpuu/reg_file16/Mmux_rd1_data_2_f8_9 (cpuu/out_rfRsrc_to_arith_mux<4>)
+     LUT5:I4->O            5   0.254   1.069  cpuu/alu/addsub/Mxor_Bx<4>_xo<0>1 (cpuu/alu/addsub/Bx<4>)
+     LUT6:I3->O            1   0.235   0.910  cpuu/alu/addsub/csa/muxs1/Mmux_X41_SW2 (N45)
+     LUT5:I2->O            9   0.235   0.976  cpuu/alu/addsub/csa/muxs1/Mmux_X41 (cpuu/alu/addsub/csa/muxs1/Mmux_X41)
+     LUT6:I5->O            1   0.254   0.682  cpuu/alu/addsub/csa/muxc2/Mmux_X11 (cpuu/alu/addsub/csa/C2)
+     LUT6:I5->O            1   0.254   0.000  cpuu/alu/muxy/Mmux_X_351 (cpuu/alu/muxy/Mmux_X_35)
+     MUXF7:I1->O           2   0.175   0.726  cpuu/alu/muxy/Mmux_X_2_f7_4 (cpuu/out_alu_to_mux<14>)
+     LUT6:I5->O            1   0.254   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_35 (cpuu/which_to_load_wdat_mux/Mmux_X_35)
+     MUXF7:I1->O          17   0.175   1.208  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7_4 (result_14_OBUF)
+     OBUF:I->O                 2.912          result_14_OBUF (result<14>)
+    ----------------------------------------
+    Total                     13.654ns (5.854ns logic, 7.800ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpuu/dec/_n0926'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              7.733ns (Levels of Logic = 4)
+  Source:            cpuu/dec/select_mux_load (LATCH)
+  Destination:       result<15> (PAD)
+  Source Clock:      cpuu/dec/_n0926 rising
+
+  Data Path: cpuu/dec/select_mux_load to result<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE_1:G->Q           16   0.581   1.410  cpuu/dec/select_mux_load (cpuu/dec/select_mux_load)
+     LUT3:I0->O            1   0.235   0.958  cpuu/muxload/Mmux_X21 (cpuu/out_muxload<10>)
+     LUT6:I2->O            1   0.254   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_31 (cpuu/which_to_load_wdat_mux/Mmux_X_31)
+     MUXF7:I1->O          17   0.175   1.208  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7_0 (result_10_OBUF)
+     OBUF:I->O                 2.912          result_10_OBUF (result<10>)
+    ----------------------------------------
+    Total                      7.733ns (4.157ns logic, 3.576ns route)
+                                       (53.8% logic, 46.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpuu/dec/op[3]_op_ex[3]_MUX_155_o'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              7.666ns (Levels of Logic = 4)
+  Source:            cpuu/dec/select_mux_mov (LATCH)
+  Destination:       result<7> (PAD)
+  Source Clock:      cpuu/dec/op[3]_op_ex[3]_MUX_155_o falling
+
+  Data Path: cpuu/dec/select_mux_mov to result<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              16   0.581   1.410  cpuu/dec/select_mux_mov (cpuu/dec/select_mux_mov)
+     LUT3:I0->O            1   0.235   0.910  cpuu/mux_mov/Mmux_X17 (cpuu/out_mov_mux<0>)
+     LUT6:I3->O            1   0.235   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_3 (cpuu/which_to_load_wdat_mux/Mmux_X_3)
+     MUXF7:I1->O          17   0.175   1.208  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7 (result_0_OBUF)
+     OBUF:I->O                 2.912          result_0_OBUF (result<0>)
+    ----------------------------------------
+    Total                      7.666ns (4.138ns logic, 3.528ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpuu/dec/op[3]_op[3]_AND_63_o'
+  Total number of paths / destination ports: 258 / 16
+-------------------------------------------------------------------------
+Offset:              11.910ns (Levels of Logic = 7)
+  Source:            cpuu/dec/select_which_to_shift (LATCH)
+  Destination:       result<10> (PAD)
+  Source Clock:      cpuu/dec/op[3]_op[3]_AND_63_o falling
+
+  Data Path: cpuu/dec/select_which_to_shift to result<10>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              33   0.581   1.765  cpuu/dec/select_which_to_shift (cpuu/dec/select_which_to_shift)
+     LUT3:I0->O           33   0.235   1.537  cpuu/mux_which_shift/Mmux_X11 (cpuu/out_mux_to_shifter_in<0>)
+     LUT6:I5->O            5   0.254   1.117  cpuu/Sh141 (cpuu/Sh14)
+     LUT6:I2->O            1   0.254   0.682  cpuu/shift/Mmux_shifted_result21 (cpuu/shift/Mmux_shifted_result2)
+     LUT5:I4->O            1   0.254   0.682  cpuu/shift/Mmux_shifted_result22 (cpuu/out_shifter_to_select_mux_which_load<10>)
+     LUT6:I5->O            1   0.254   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_31 (cpuu/which_to_load_wdat_mux/Mmux_X_31)
+     MUXF7:I1->O          17   0.175   1.208  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7_0 (result_10_OBUF)
+     OBUF:I->O                 2.912          result_10_OBUF (result<10>)
+    ----------------------------------------
+    Total                     11.910ns (4.919ns logic, 6.991ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpuu/dec/op[3]_op_ex[3]_MUX_158_o'
+  Total number of paths / destination ports: 280 / 16
+-------------------------------------------------------------------------
+Offset:              13.376ns (Levels of Logic = 9)
+  Source:            cpuu/dec/alu_out_0 (LATCH)
+  Destination:       result<14> (PAD)
+  Source Clock:      cpuu/dec/op[3]_op_ex[3]_MUX_158_o falling
+
+  Data Path: cpuu/dec/alu_out_0 to result<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              79   0.581   2.476  cpuu/dec/alu_out_0 (cpuu/dec/alu_out_0)
+     LUT5:I0->O            5   0.254   1.069  cpuu/alu/addsub/Mxor_Bx<4>_xo<0>1 (cpuu/alu/addsub/Bx<4>)
+     LUT6:I3->O            1   0.235   0.910  cpuu/alu/addsub/csa/muxs1/Mmux_X41_SW2 (N45)
+     LUT5:I2->O            9   0.235   0.976  cpuu/alu/addsub/csa/muxs1/Mmux_X41 (cpuu/alu/addsub/csa/muxs1/Mmux_X41)
+     LUT6:I5->O            1   0.254   0.682  cpuu/alu/addsub/csa/muxc2/Mmux_X11 (cpuu/alu/addsub/csa/C2)
+     LUT6:I5->O            1   0.254   0.000  cpuu/alu/muxy/Mmux_X_351 (cpuu/alu/muxy/Mmux_X_35)
+     MUXF7:I1->O           2   0.175   0.726  cpuu/alu/muxy/Mmux_X_2_f7_4 (cpuu/out_alu_to_mux<14>)
+     LUT6:I5->O            1   0.254   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_35 (cpuu/which_to_load_wdat_mux/Mmux_X_35)
+     MUXF7:I1->O          17   0.175   1.208  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7_4 (result_14_OBUF)
+     OBUF:I->O                 2.912          result_14_OBUF (result<14>)
+    ----------------------------------------
+    Total                     13.376ns (5.329ns logic, 8.047ns route)
+                                       (39.8% logic, 60.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cpuu/dec/op[3]_op_ex[3]_MUX_157_o'
+  Total number of paths / destination ports: 544 / 16
+-------------------------------------------------------------------------
+Offset:              12.794ns (Levels of Logic = 9)
+  Source:            cpuu/dec/arith_mux_select0 (LATCH)
+  Destination:       result<14> (PAD)
+  Source Clock:      cpuu/dec/op[3]_op_ex[3]_MUX_157_o falling
+
+  Data Path: cpuu/dec/arith_mux_select0 to result<14>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              33   0.581   1.813  cpuu/dec/arith_mux_select0 (cpuu/dec/arith_mux_select0)
+     LUT4:I0->O            7   0.254   0.910  cpuu/arith_mux/Mmux_X121 (cpuu/out_arith_mux_to_alu_input<5>)
+     LUT5:I4->O            1   0.254   1.112  cpuu/alu/addsub/csa/muxs1/Mmux_X41_SW0 (N27)
+     LUT5:I0->O            9   0.254   0.976  cpuu/alu/addsub/csa/muxs1/Mmux_X41 (cpuu/alu/addsub/csa/muxs1/Mmux_X41)
+     LUT6:I5->O            1   0.254   0.682  cpuu/alu/addsub/csa/muxc2/Mmux_X11 (cpuu/alu/addsub/csa/C2)
+     LUT6:I5->O            1   0.254   0.000  cpuu/alu/muxy/Mmux_X_351 (cpuu/alu/muxy/Mmux_X_35)
+     MUXF7:I1->O           2   0.175   0.726  cpuu/alu/muxy/Mmux_X_2_f7_4 (cpuu/out_alu_to_mux<14>)
+     LUT6:I5->O            1   0.254   0.000  cpuu/which_to_load_wdat_mux/Mmux_X_35 (cpuu/which_to_load_wdat_mux/Mmux_X_35)
+     MUXF7:I1->O          17   0.175   1.208  cpuu/which_to_load_wdat_mux/Mmux_X_2_f7_4 (result_14_OBUF)
+     OBUF:I->O                 2.912          result_14_OBUF (result<14>)
+    ----------------------------------------
+    Total                     12.794ns (5.367ns logic, 7.427ns route)
+                                       (42.0% logic, 58.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'board_clk'
+  Total number of paths / destination ports: 64 / 11
+-------------------------------------------------------------------------
+Offset:              7.243ns (Levels of Logic = 3)
+  Source:            sevensegmentled/count_16 (FF)
+  Destination:       a (PAD)
+  Source Clock:      board_clk rising
+
+  Data Path: sevensegmentled/count_16 to a
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.525   1.431  sevensegmentled/count_16 (sevensegmentled/count_16)
+     LUT6:I0->O            7   0.254   1.186  sevensegmentled/Mmux_sseg41 (sevensegmentled/sseg<3>)
+     LUT4:I0->O            1   0.254   0.681  sevensegmentled/_n0076<2>1 (ff_OBUF)
+     OBUF:I->O                 2.912          ff_OBUF (ff)
+    ----------------------------------------
+    Total                      7.243ns (3.945ns logic, 3.298ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock board_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+board_clk      |    3.482|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/_n0926
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|    5.949|         |         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/op[3]_op[3]_AND_63_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|         |         |    2.683|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/op[3]_op[3]_OR_50_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|         |         |    4.104|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/op[3]_op[3]_OR_61_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|         |         |    3.872|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/op[3]_op_ex[3]_MUX_141_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|         |         |    4.890|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/op[3]_op_ex[3]_MUX_155_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|         |         |    2.511|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/op[3]_op_ex[3]_MUX_157_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|         |         |    2.527|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpuu/dec/op[3]_op_ex[3]_MUX_158_o
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+debouncee/DB_out|         |         |    4.153|         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock debouncee/DB_out
+---------------------------------+---------+---------+---------+---------+
+                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------+---------+---------+---------+---------+
+cpuu/dec/_n0926                  |    5.150|         |         |         |
+cpuu/dec/op[3]_op[3]_AND_63_o    |         |    9.327|         |         |
+cpuu/dec/op[3]_op[3]_OR_50_o     |         |    3.314|         |         |
+cpuu/dec/op[3]_op[3]_OR_61_o     |         |    4.522|         |         |
+cpuu/dec/op[3]_op_ex[3]_MUX_141_o|         |    4.508|         |         |
+cpuu/dec/op[3]_op_ex[3]_MUX_155_o|         |    5.083|         |         |
+cpuu/dec/op[3]_op_ex[3]_MUX_157_o|         |   10.211|         |         |
+cpuu/dec/op[3]_op_ex[3]_MUX_158_o|         |   10.793|         |         |
+debouncee/DB_out                 |   11.071|         |         |         |
+---------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.81 secs
+ 
+--> 
+
+Total memory usage is 296460 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   88 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

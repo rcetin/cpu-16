@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.ncd
+OUTFILE=D:\BOUN\Repositories\cpu\CPU_FPGA\mikrop.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=D:\BOUN\Repositories\cpu\CPU_FPGA
+LICENSE=WebPack
+USER_INFO=211107817_0_0_255
